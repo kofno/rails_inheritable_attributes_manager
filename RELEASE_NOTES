@@ -1,0 +1,8 @@
+* 0.3.0 *
+Support for inherited nested attributes
+
+* 0.2.0 * (never released)
+Name change
+
+* 0.1.0 *
+Support for controller filter chains

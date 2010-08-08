@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
      "README.markdown",
      "Rakefile",
      "VERSION",
+     "RELEASE_NOTES",
      "Gemfile",
      "init.rb",
      "lib/**/*",
