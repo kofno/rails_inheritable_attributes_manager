@@ -13,6 +13,9 @@ require 'redgreen'
 gem 'actionpack'
 require 'action_controller'
 
+gem 'activerecord'
+require 'active_record'
+
 #my bits
 require 'rails_inheritable_attributes_manager'
 

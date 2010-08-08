@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), 'test_helper')
+require 'test_helper'
 
 # captures normal, healthy filter_chain behavior
 class NormalFilterChainTest < Test::Unit::TestCase

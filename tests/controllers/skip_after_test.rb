@@ -1,17 +1,18 @@
-require File.join(File.dirname(__FILE__), 'test_helper')
+require 'test_helper'
 
-class PrependBeforeTest < Test::Unit::TestCase
+class SkipAfterTest < Test::Unit::TestCase
 
   class ApplicationController < ::ActionController::Base
-    prepend_before_filter :application_filter
+    after_filter :application_filter
   end
 
   class ChildController < ApplicationController
-    prepend_before_filter :child_filter
+    after_filter :child_filter
+    skip_after_filter :after_thought
   end
 
   ApplicationController.class_eval do
-    prepend_before_filter :after_thought
+    after_filter :after_thought
   end
 
   context "The ApplicationController" do
@@ -34,9 +35,9 @@ class PrependBeforeTest < Test::Unit::TestCase
 
     should "should have its own filter, plus the inherited ones" do
       assert_contains_filter @child_filter_chain, :application_filter
-      assert_contains_filter @child_filter_chain, :after_thought
+      assert_filter_absent   @child_filter_chain, :after_thought
       assert_contains_filter @child_filter_chain, :child_filter
-      assert_equal 3, @child_filter_chain.size
+      assert_equal 2, @child_filter_chain.size
     end
   end
 end

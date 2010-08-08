@@ -3,6 +3,6 @@ require 'rake/testtask'
 task :default => :test
 
 Rake::TestTask.new do |t|
-  t.libs << "test"
-  t.test_files = FileList['tests/*_test.rb']
+  t.libs = %w(tests lib)
+  t.pattern = 'tests/**/*_test.rb'
 end

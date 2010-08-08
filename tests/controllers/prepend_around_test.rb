@@ -1,17 +1,17 @@
-require File.join(File.dirname(__FILE__), 'test_helper')
+require 'test_helper'
 
-class PrependAfterTest < Test::Unit::TestCase
+class PrependAroundTest < Test::Unit::TestCase
 
   class ApplicationController < ::ActionController::Base
-    prepend_after_filter :application_filter
+    prepend_around_filter :application_filter
   end
 
   class ChildController < ApplicationController
-    prepend_after_filter :child_filter
+    prepend_around_filter :child_filter
   end
 
   ApplicationController.class_eval do
-    prepend_after_filter :after_thought
+    prepend_around_filter :after_thought
   end
 
   context "The ApplicationController" do
