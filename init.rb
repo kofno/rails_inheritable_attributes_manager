@@ -1,1 +1,1 @@
-require 'freshy_filter_chain'
+require 'rails_inheritable_attributes_manager'

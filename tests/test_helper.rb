@@ -14,7 +14,7 @@ gem 'actionpack'
 require 'action_controller'
 
 #my bits
-require 'freshy_filter_chain'
+require 'rails_inheritable_attributes_manager'
 
 # some useful assertions
 
