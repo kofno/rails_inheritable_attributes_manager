@@ -1,3 +1,5 @@
+require 'rake'
+
 Gem::Specification.new do |s|
   s.name = %q{rails_inheritable_attributes_manager}
   s.version = "0.2.0"
@@ -11,25 +13,15 @@ Gem::Specification.new do |s|
     "LICENSE",
      "README.markdown"
   ]
-  s.files = [
+  s.files = FileList[
      "LICENSE",
      "README.markdown",
      "Rakefile",
      "VERSION",
+     "Gemfile",
      "init.rb",
-     "lib/rails_inheritable_attributes_manager.rb",
-     "tests/append_after_test.rb",
-     "tests/append_around_test.rb",
-     "tests/append_before_test.rb",
-     "tests/deep_class_hierarchy_test.rb",
-     "tests/normal_filter_chain_test.rb",
-     "tests/prepend_after_test.rb",
-     "tests/prepend_around_test.rb",
-     "tests/prepend_before_test.rb",
-     "tests/skip_after_test.rb",
-     "tests/skip_before_test.rb",
-     "tests/skip_test.rb",
-     "tests/test_helper.rb"
+     "lib/**/*",
+     "tests/**/*"
   ]
   s.homepage = %q{http://github.com/kofno/rails_inheritable_attributes_manager}
   s.rdoc_options = ["--charset=UTF-8"]
