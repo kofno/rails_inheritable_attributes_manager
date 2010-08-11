@@ -1,3 +1,6 @@
+* 0.3.1 *
+Support for AR reflections
+
 * 0.3.0 *
 Support for inherited nested attributes
 
