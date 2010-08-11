@@ -9,11 +9,6 @@ class AcceptsNestedAttributesForTest < Test::Unit::TestCase
       initialize_db
       create_mammals
       create_legs
-
-      Mammal.class_eval do
-        has_many :legs
-        accepts_nested_attributes_for :legs, :reject_if => :all_blank
-      end
     end
 
     should "not fail if legs association added to re-opened Mammal class" do
