@@ -1,3 +1,5 @@
-require 'controllers'
+require 'controllers/controller_filters'
 
-require 'models'
+require 'models/nested_attributes'
+require 'models/reflection'
+
